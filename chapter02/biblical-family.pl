@@ -79,3 +79,8 @@ father_in_law(FatherInLaw, Spouse) :-
 	married_couple(Spouse, Husband),
 	father(FatherInLaw, Husband).
 
+% Recursive rules
+ancestor(Ancestor, Descendant) :-
+	parent(Ancestor, Descendant).
+ancestor(Ancestor, Descendant) :-
+	ancestor(Ancestor, Person), ancestor(Person, Descendant).
