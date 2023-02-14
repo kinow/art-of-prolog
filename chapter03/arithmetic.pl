@@ -20,4 +20,13 @@ times(X, Y, Z):-
 	times(X1, Y, Z1),
 	plus_(Y, Z1, Z).
 
-	
+exp(_, 0, 0).
+exp(0, _, 0).
+exp(N, 1, N).
+exp(N, X, Y):-
+	natural_number(N),
+	natural_number(X),
+	N > 0,
+	N1 is N - 1,
+	exp(N1, X, Z),
+	times(Z, X, Y).
