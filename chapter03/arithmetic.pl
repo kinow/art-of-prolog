@@ -21,7 +21,7 @@ times(X, Y, Z):-
 	plus_(Y, Z1, Z).
 
 exp(_, 0, 0).
-exp(0, _, 0).
+exp(0, _, 1).
 exp(N, 1, N).
 exp(N, X, Y):-
 	natural_number(N),
